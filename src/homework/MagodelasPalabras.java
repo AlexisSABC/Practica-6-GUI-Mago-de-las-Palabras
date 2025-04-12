@@ -272,7 +272,11 @@ public class MagodelasPalabras {
             letterButton.setFont(new Font("Comic Sans MS", Font.BOLD, 40));
             letterButton.setBackground(Color.LIGHT_GRAY);
             letterButton.setBorder(new LineBorder(Color.BLACK, 3));
-            letterButton.setBounds((gameWindow.getWidth())/3 + ((i+1) * 60),(gameWindow.getHeight())/2+(gameWindow.getHeight())/6,letterButton.getPreferredSize().width+letterButton.getPreferredSize().width/4,letterButton.getPreferredSize().height);
+            if(difficultGame){
+                letterButton.setBounds((gameWindow.getWidth())/3 + ((i+1) * 60),(gameWindow.getHeight())/2+(gameWindow.getHeight())/6,letterButton.getPreferredSize().width+letterButton.getPreferredSize().width/4,letterButton.getPreferredSize().height);
+            }else{
+                letterButton.setBounds((gameWindow.getWidth())/3 + ((i+1) * 60) + 60,(gameWindow.getHeight())/2+(gameWindow.getHeight())/6,letterButton.getPreferredSize().width+letterButton.getPreferredSize().width/4,letterButton.getPreferredSize().height);
+            }
             gameWindow.add(letterButton);
             letterButton.setVisible(true);
 
@@ -326,7 +330,7 @@ public class MagodelasPalabras {
         if(difficultGame) {
             setWordButton.setBounds((gameWindow.getWidth() - skipTurnButton.getPreferredSize().width) / 2, (gameWindow.getHeight()) / 2 + (gameWindow.getHeight()) / 3, setWordButton.getPreferredSize().width, setWordButton.getPreferredSize().height);
         }else{
-            setWordButton.setBounds((gameWindow.getWidth()- skipTurnButton.getPreferredSize().width*2)/2,(gameWindow.getHeight())/2+(gameWindow.getHeight())/3,setWordButton.getPreferredSize().width,setWordButton.getPreferredSize().height);
+            setWordButton.setBounds((((gameWindow.getWidth()- skipTurnButton.getPreferredSize().width)/3) * 2) - 40,(gameWindow.getHeight())/2+(gameWindow.getHeight())/3,setWordButton.getPreferredSize().width,setWordButton.getPreferredSize().height);
         }
         setWordButton.setVisible(true);
         gameWindow.add(setWordButton);
@@ -491,7 +495,6 @@ public class MagodelasPalabras {
 
                     foundWords.clear();
                     foundWordsData.clear();
-                    mainSign.setText("");
                     showButtonLetters();
                     showUsedWords(true);
 
@@ -501,8 +504,6 @@ public class MagodelasPalabras {
                     }else{
                         playerTurn = 1;
                     }
-
-                    mainSign.setText("");
                 }
             }
         }
