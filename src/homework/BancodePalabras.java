@@ -53,8 +53,4 @@ public class BancodePalabras {
 
         return bank;
     }
-
-    public ArrayList<String> getWordsBank() {
-        return wordsBank;
-    }
 }
