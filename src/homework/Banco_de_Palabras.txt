@@ -4166,3 +4166,8 @@ hola
 puso
 fruto
 ramo
+brinco
+rubio
+rol
+parta
+arco

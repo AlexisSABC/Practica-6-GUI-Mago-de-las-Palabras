@@ -496,6 +496,7 @@ public class MagodelasPalabras {
                     foundWords.clear();
                     foundWordsData.clear();
                     showButtonLetters();
+                    showWord.setText("");
                     showUsedWords(true);
 
                 }else{
