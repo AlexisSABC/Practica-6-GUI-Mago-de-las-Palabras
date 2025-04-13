@@ -216,7 +216,7 @@ public class MagodelasPalabras {
                 "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A cada jugador se le da un set de 10 palabras. <br>" +
                 "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hay 3 vocales garantizadas. <br>" +
                 "&nbsp;&nbsp;&nbsp;&nbsp; -) Experto: Los jugadores solo podran poner una palabra en su turno. <br>" +
-                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cada jugador contara con un set de 7 letras para crear la palabra. <br>" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cada jugador contara con un set de 8 letras para crear la palabra. <br>" +
                 "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hay 2 vocales garantizadas. <br></html>");
 
         rulesWindow.setResizable(false);
@@ -231,7 +231,7 @@ public class MagodelasPalabras {
         if(difficultGame){
             lettersAmount = 10;
         }else{
-            lettersAmount = 7;
+            lettersAmount = 8;
         }
 
         //Crear jugadores
@@ -275,7 +275,7 @@ public class MagodelasPalabras {
             if(difficultGame){
                 letterButton.setBounds((gameWindow.getWidth())/3 + ((i+1) * 60),(gameWindow.getHeight())/2+(gameWindow.getHeight())/6,letterButton.getPreferredSize().width+letterButton.getPreferredSize().width/4,letterButton.getPreferredSize().height);
             }else{
-                letterButton.setBounds((gameWindow.getWidth())/3 + ((i+1) * 60) + 60,(gameWindow.getHeight())/2+(gameWindow.getHeight())/6,letterButton.getPreferredSize().width+letterButton.getPreferredSize().width/4,letterButton.getPreferredSize().height);
+                letterButton.setBounds((gameWindow.getWidth())/3 + ((i+1) * 60) + 30,(gameWindow.getHeight())/2+(gameWindow.getHeight())/6,letterButton.getPreferredSize().width+letterButton.getPreferredSize().width/4,letterButton.getPreferredSize().height);
             }
             gameWindow.add(letterButton);
             letterButton.setVisible(true);
